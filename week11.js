@@ -141,6 +141,9 @@ document.querySelector('.b-10').onclick = makeTen;
 
 function makeEleven() {
 	//Ваш код
+	const div = document.getElementById('practicum11');
+	div.style.width = '400px';
+	div.style.height = '200px';
 }
 
 document.querySelector('.b-11').onclick = makeEleven;
@@ -150,7 +153,8 @@ document.querySelector('.b-11').onclick = makeEleven;
 //Подсказка: Используйте метод toggle() для добавления/удаления класса, который изменяет размеры элемента
 
 function makeTwelve() {
-	//Ваш код
+	const div = document.querySelector('.resizeable');
+	div.classList.toggle('large');
 }
 
 //Задание 13
@@ -158,7 +162,8 @@ function makeTwelve() {
 //Подсказка: Используйте метод для изменения текстового содержимого элемента
 
 function makeThirteen() {
-	//Ваш код
+	const listItem = document.getElementsByTagName('ol');
+	listItem[0].innerText = 'Первый!';
 }
 
 document.querySelector('.b-13').onclick = makeThirteen;
@@ -168,11 +173,10 @@ document.querySelector('.b-13').onclick = makeThirteen;
 //Метод forEach является методом массивов в JavaScript. Он выполняет указанную функцию один раз для каждого элемента в массиве. С этим методом мы познакомимся на следующей неделе.
 
 function makeFourteen() {
-	//Найдите все элементы <p>
-	//const paragraphs = ваш код;
+	const paragraphs = document.querySelectorAll('p');
+	paragraphs.innerText = "Огого, что могу!";
 	paragraphs.forEach(function (paragraph) {
-		//Измените их текстовое содержимое у paragraph
-	});
+	}); //???
 }
 
 document.querySelector('.b-14').onclick = makeFourteen;
@@ -184,7 +188,8 @@ document.querySelector('.b-14').onclick = makeFourteen;
 //Подсказка: Используйте метод remove для удаления класса элемента
 
 function makeFifteen() {
-	//Ваш код
+	const div = document.getElementById('practicum15');
+	div.classList.remove('practicum15');
 }
 
 document.querySelector('.b-15').onclick = makeFifteen;
@@ -194,7 +199,8 @@ document.querySelector('.b-15').onclick = makeFifteen;
 //Подсказка: Используйте метод add для добавления класса элемента
 
 function makeSixteen() {
-	//Ваш код
+	const div = document.getElementById('practicum16');
+	div.classList.add('practicum16');
 }
 
 document.querySelector('.b-16').onclick = makeSixteen;
@@ -204,7 +210,8 @@ document.querySelector('.b-16').onclick = makeSixteen;
 //Подсказка: Используйте метод toggle класса элемента
 
 function makeSeventeen() {
-	//Ваш код
+	const div = document.getElementById('practicum17');
+	div.classList.toggle('color');
 }
 
 document.querySelector('.b-17').onclick = makeSeventeen;
@@ -214,7 +221,8 @@ document.querySelector('.b-17').onclick = makeSeventeen;
 //Подсказка: Используйте метод toggle класса элемента
 
 function makeEighteen() {
-	//Ваш код
+	const div = document.getElementById('practicum18');
+	div.classList.toggle('active');
 }
 
 document.querySelector('.b-18').onclick = makeEighteen;
@@ -224,7 +232,8 @@ document.querySelector('.b-18').onclick = makeEighteen;
 //Подсказка: Используйте метод remove класса элемента
 
 function makeNineteen() {
-	//Ваш код
+	const div = document.getElementById('practicum19');
+	div.classList.remove('active');
 }
 
 document.querySelector('.b-19').onclick = makeNineteen;
@@ -234,7 +243,10 @@ document.querySelector('.b-19').onclick = makeNineteen;
 //Подсказка: Используйте метод prepend для добавления нового дочернего элемента в начало элемента <div>
 
 function makeTwenty() {
-	//Ваш код
+	const div = document.getElementById('practicum20');
+	const newParagraph = document.createElement('p');
+	newParagraph.textContent = "Добавлено в начало";
+	div.prepend(newParagraph);
 }
 
 document.querySelector('.b-20').onclick = makeTwenty;
@@ -244,7 +256,10 @@ document.querySelector('.b-20').onclick = makeTwenty;
 //Подсказка: Используйте метод append для добавления нового дочернего элемента в конец элемента <div>
 
 function makeTwentyOne() {
-	//Ваш код
+	const div = document.getElementById('practicum21');
+	const newParagraph = document.createElement('p');
+	newParagraph.textContent = "Добавлено в конец";
+	div.append(newParagraph);
 }
 
 document.querySelector('.b-21').onclick = makeTwentyOne;
@@ -254,10 +269,9 @@ document.querySelector('.b-21').onclick = makeTwentyOne;
 //Подсказка: Используйте метод hasAttribute для проверки наличия атрибута
 
 function makeTwentyTwo() {
-	//1 шаг: Найдите элемент
-	//2 шаг: Создайте переменную, которая проверяет наличие атрибута у найденного элемента
-	//3 шаг: Найдите элемент, в который нужно вставить значение
-	//4 шаг: Добавьте в эелемент текстовое значение 2 шага. Например: переменная = 'Атрибут "src" присутствует: ' + название переменной из 2 шага;
+	const img = document.getElementById('practicum22');
+	const result = document.getElementById('result22');
+	result.innerText = `Наличие атрибута src у тега img - ${img.hasAttribute('src')} (true - есть, false - нет).`;
 }
 
 document.querySelector('.b-22').onclick = makeTwentyTwo;
@@ -267,7 +281,8 @@ document.querySelector('.b-22').onclick = makeTwentyTwo;
 //Подсказка: Используйте метод removeAttribute для удаления атрибута
 
 function makeTwentyThree() {
-	//Ваш код
+	const link = document.getElementById('practicum23');
+	link.removeAttribute('href');
 }
 
 document.querySelector('.b-23').onclick = makeTwentyThree;
@@ -277,7 +292,8 @@ document.querySelector('.b-23').onclick = makeTwentyThree;
 //Подсказка: Используйте метод setAttribute для установки атрибута
 
 function makeTwentyFour() {
-	//Ваш код
+	const input = document.getElementById('practicum24');
+	input.setAttribute('value', 'Новое значение');
 }
 
 document.querySelector('.b-24').onclick = makeTwentyFour;
@@ -288,10 +304,15 @@ document.querySelector('.b-24').onclick = makeTwentyFour;
 
 function makeTwentyFive() {
 	//1 шаг: Найдите элемент
+	const element = document.getElementById('practicum25');
 	//2 шаг: Добавьте элементу, найденному в первом шаге, атрибут: ('data-info', 'Дополнительная информация');
+	element.setAttribute('data-info', 'Дополнительная информация');
 	//3 шаг: Запишите значение атрибута в переменную
+	const attribute = element.getAttribute('data-info');
 	//4 шаг: Найдите элемент, в который нужно вставить значение из 3 шага
+	const info = document.getElementById('infoOutput');
 	//5 шаг: Добавьте в элемент 4 шага текстовое значение 3 шага. Например: переменная = 'Добавленный атрибут: ' + название переменной из 3 шага;
+	info.innerText = `Значение атрибута data-info: ${attribute}`;
 }
 
 document.querySelector('.b-25').onclick = makeTwentyFive;
