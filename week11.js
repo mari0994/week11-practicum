@@ -175,7 +175,7 @@ document.querySelector('.b-13').onclick = makeThirteen;
 function makeFourteen() {
 	const paragraphs = document.querySelectorAll('p');
 	paragraphs.forEach(function (paragraph) {
-		paragraph.innerText = "Огого, что могу!";
+		paragraphs.innerText = "Огого, что могу!";
 	})
 }
 
