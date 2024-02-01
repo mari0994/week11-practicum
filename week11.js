@@ -163,7 +163,7 @@ function makeTwelve() {
 
 function makeThirteen() {
 	const listItem = document.getElementsByTagName('ol');
-	listItem[0].innerText = 'Первый!';
+	listItem[0].textContent = 'Первый!';
 }
 
 document.querySelector('.b-13').onclick = makeThirteen;
@@ -317,9 +317,9 @@ document.querySelector('.b-25').onclick = makeTwentyFive;
 //Подсказка: Используйте метод closest для поиска ближайшего родительского элемента
 
 const button = document.querySelector('.b-26');
-const parent = button.closest('.parent');
 
 const makeTwentySix = () => {
+	const parent = button.closest('.parent');
 	parent.style.backgroundColor = 'red';
 };
 
